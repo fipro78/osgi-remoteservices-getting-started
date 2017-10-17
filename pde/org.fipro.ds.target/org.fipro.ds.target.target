@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde?>
+<!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
+<target name="org.fipro.ds.target" sequenceNumber="1507899042">
+  <locations>
+    <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="true" type="InstallableUnit">
+      <unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.13.1.v20170811-1407"/>
+      <unit id="org.eclipse.equinox.executable.feature.group" version="3.7.1.v20170928-1359"/>
+      <unit id="org.eclipse.rcp.sdk.id" version="4.7.1.M20171009-0410"/>
+      <unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.13.8.v20170816-0246"/>
+      <repository location="http://download.eclipse.org/releases/oxygen/"/>
+    </location>
+  </locations>
+</target>
