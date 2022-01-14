@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.3.0" name="org.fipro.modifier.client.ModifyCommand">
+   <property name="osgi.command.scope" type="String" value="fipro"/>
+   <property name="osgi.command.function" type="String" value="modify"/>
+   <service>
+      <provide interface="org.fipro.modifier.client.ModifyCommand"/>
+   </service>
+   <reference cardinality="0..n" field="modifier" interface="org.fipro.modifier.api.StringModifier" name="modifier" policy="dynamic"/>
+   <implementation class="org.fipro.modifier.client.ModifyCommand"/>
+</scr:component>

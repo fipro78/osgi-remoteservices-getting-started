@@ -31,14 +31,7 @@
          unpack="false"/>
 
    <plugin
-         id="org.fipro.modifier.provider"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="org.fipro.ds.remote.debug"
+         id="org.fipro.remoteservice.debug"
          download-size="0"
          install-size="0"
          version="0.0.0"

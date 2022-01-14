@@ -15,16 +15,18 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
-import org.fipro.modifier.StringModifier;
+import org.fipro.modifier.api.StringModifier;
  
-@SuppressWarnings("restriction")
 public class InverterPart {
 
-	@Inject
-	@Service
 	private List<StringModifier> modifierList;
+
+	private Button button;
+	private Text input;
+	private Text output;
 	
 	@PostConstruct
 	public void postConstruct(Composite parent) {
@@ -34,28 +36,24 @@ public class InverterPart {
 		inputLabel.setText("String to modify:");
 		GridDataFactory.fillDefaults().applyTo(inputLabel);
  
-		final Text input = new Text(parent, SWT.BORDER);
+		input = new Text(parent, SWT.BORDER);
 		GridDataFactory.fillDefaults().grab(true, false).applyTo(input);
  
-		Button button = new Button(parent, SWT.PUSH);
-		button.setText("Modify");
+		button = new Button(parent, SWT.PUSH);
+		button.setText("Modify (" + (modifierList != null ? modifierList.size() : 0) + ")");
 		GridDataFactory.defaultsFor(button).applyTo(button);
  
 		Label outputLabel = new Label(parent, SWT.NONE);
 		outputLabel.setText("Modified String:");
 		GridDataFactory.fillDefaults().applyTo(outputLabel);
  
-		final Text output = new Text(parent, SWT.READ_ONLY | SWT.WRAP);
+		output = new Text(parent, SWT.READ_ONLY | SWT.WRAP);
 		GridDataFactory.fillDefaults().grab(true, true).span(2, 1).applyTo(output);
  
 		button.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				StringBuilder builder = new StringBuilder();
-				for (StringModifier modifier : modifierList) {
-					builder.append(((StringModifier) modifier).modify(input.getText())).append(System.getProperty("line.separator"));
-				}
-				output.setText(builder.toString());
+				processModification();
 			}
 		});
  
@@ -64,14 +62,28 @@ public class InverterPart {
 			public void keyPressed(KeyEvent e) {
 				if (e.keyCode == SWT.CR
 						|| e.keyCode == SWT.KEYPAD_CR) {
-					StringBuilder builder = new StringBuilder();
-					for (StringModifier modifier : modifierList) {
-						builder.append(((StringModifier) modifier).modify(input.getText())).append(System.getProperty("line.separator"));
-					}
-					output.setText(builder.toString());
+					processModification();
 				}
 			}
 		});
 	}
 
+	@Inject
+	void setStringModifier(@Service List<StringModifier> modifierList) {
+		this.modifierList = modifierList;
+		
+		if (button != null) {
+			Display.getDefault().asyncExec(() -> {
+				button.setText("Modify (" + (modifierList != null ? modifierList.size() : 0) + ")");
+			});
+		}
+	}
+	
+	private void processModification() {
+		StringBuilder builder = new StringBuilder();
+		for (StringModifier modifier : modifierList) {
+			builder.append(((StringModifier) modifier).modify(input.getText())).append(System.getProperty("line.separator"));
+		}
+		output.setText(builder.toString());
+	}
 }

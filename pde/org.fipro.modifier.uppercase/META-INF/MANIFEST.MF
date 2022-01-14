@@ -1,11 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Uppercase Modifier Provider
+Bundle-Name: Uppercase Service
 Bundle-SymbolicName: org.fipro.modifier.uppercase
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: org.fipro.modifier;version="1.0.0",
- org.osgi.service.component.annotations;version="1.3.0";resolution:=optional
+Automatic-Module-Name: org.fipro.modifier.uppercase
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: javax.ws.rs;version="2.1.5",
+ javax.ws.rs.core;version="2.1.5",
+ org.fipro.modifier.api;version="[1.0.0,2.0.0)",
+ org.osgi.service.component.annotations;version="[1.3.0,2.0.0)";resolution:=optional
 Service-Component: OSGI-INF/org.fipro.modifier.uppercase.UppercaseModifier.xml
 Bundle-ActivationPolicy: lazy
-Automatic-Module-Name: org.fipro.modifier.uppercase

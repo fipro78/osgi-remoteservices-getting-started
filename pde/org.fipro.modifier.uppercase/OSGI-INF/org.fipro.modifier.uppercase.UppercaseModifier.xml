@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.modifier.uppercase.UppercaseModifier">
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="org.fipro.modifier.uppercase.UppercaseModifier">
    <property name="service.exported.interfaces" value="*"/>
-   <property name="service.exported.configs" value="ecf.generic.server"/>
+   <property name="service.exported.configs" value="ecf.jaxrs.jersey.server"/>
+   <property name="service.exported.intents" value="jaxrs"/>
+   <property name="ecf.jaxrs.server.pathPrefix" value="/upper"/>
    <service>
-      <provide interface="org.fipro.modifier.StringModifier"/>
+      <provide interface="org.fipro.modifier.api.StringModifier"/>
    </service>
    <implementation class="org.fipro.modifier.uppercase.UppercaseModifier"/>
 </scr:component>

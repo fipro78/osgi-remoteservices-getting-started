@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="org.fipro.modifier.provider.StringModifierImpl">
-   <service>
-      <provide interface="org.fipro.modifier.StringModifier"/>
-   </service>
-   <implementation class="org.fipro.modifier.provider.StringModifierImpl"/>
-</scr:component>

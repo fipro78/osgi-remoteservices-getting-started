@@ -1,6 +1,11 @@
 # Compiled class file
 *.class
 
+#Ignore all bin folders
+bin/
+target/
+generated/
+
 # Log file
 *.log
 

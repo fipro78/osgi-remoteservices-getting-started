@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Modifier Client
+Bundle-SymbolicName: org.fipro.modifier.client
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.fipro.modifier.client
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Import-Package: org.fipro.modifier.api;version="[1.0.0,2.0.0)",
+ org.osgi.service.component.annotations;version="[1.3.0,2.0.0)";resolution:=optional
+Service-Component: OSGI-INF/org.fipro.modifier.client.ModifyCommand.xml
+Bundle-ActivationPolicy: lazy

@@ -103,17 +103,30 @@
       <feature id="org.eclipse.emf.common"/>
       <feature id="org.fipro.ds.feature" version="1.0.0.qualifier"/>
       <feature id="org.fipro.ds.ecf" version="1.0.0.qualifier"/>
+      <feature id="org.fipro.ds.jaxrs"/>
    </features>
 
    <configurations>
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="0" />
-      <plugin id="org.eclipse.ecf.provider.jmdns" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
-      <plugin id="org.fipro.modifier.api" autoStart="false" startLevel="3" />
+      <plugin id="org.glassfish.hk2.api" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.hk2.external.aopalliance-repackaged" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.hk2.external.jakarta.inject" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.hk2.locator" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.hk2.osgi-resource-locator" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.hk2.utils" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.containers.jersey-container-servlet" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.containers.jersey-container-servlet-core" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.core.jersey-client" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.core.jersey-common" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.core.jersey-server" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.ext.jersey-entity-filtering" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.inject.jersey-hk2" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.media.jersey-media-jaxb" autoStart="true" startLevel="0" />
+      <plugin id="org.glassfish.jersey.media.jersey-media-json-jackson" autoStart="true" startLevel="0" />
    </configurations>
 
 </product>
