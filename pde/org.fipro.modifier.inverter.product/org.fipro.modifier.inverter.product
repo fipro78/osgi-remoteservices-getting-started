@@ -58,7 +58,6 @@
    </plugins>
 
    <configurations>
-      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.ecf.provider.remoteservice" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />

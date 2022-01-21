@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product uid="org.fipro.modifier.uppercase.product" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
+<product uid="org.fipro.modifier.camelcase.product" version="1.0.0.qualifier" useFeatures="false" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -9,7 +9,7 @@
    <launcherArgs>
       <programArgs>-console
       </programArgs>
-      <vmArgs>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=8181 -Decf.jaxrs.server.pathPrefix=/services
+      <vmArgs>-Declipse.ignoreApp=true -Dosgi.noShutdown=true -Dorg.osgi.service.http.port=8282 -Decf.jaxrs.server.pathPrefix=/services
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
       </vmArgsMac>
@@ -54,7 +54,6 @@
       <plugin id="org.eclipse.ecf.provider.jaxrs"/>
       <plugin id="org.eclipse.ecf.provider.jaxrs.server"/>
       <plugin id="org.eclipse.ecf.provider.jersey.server"/>
-      <plugin id="org.eclipse.ecf.provider.jmdns"/>
       <plugin id="org.eclipse.ecf.remoteservice"/>
       <plugin id="org.eclipse.ecf.remoteservice.asyncproxy"/>
       <plugin id="org.eclipse.ecf.sharedobject"/>
@@ -76,7 +75,7 @@
       <plugin id="org.eclipse.osgi.services.remoteserviceadmin"/>
       <plugin id="org.eclipse.osgi.util"/>
       <plugin id="org.fipro.modifier.api"/>
-      <plugin id="org.fipro.modifier.uppercase"/>
+      <plugin id="org.fipro.modifier.camelcase"/>
       <plugin id="org.glassfish.hk2.api"/>
       <plugin id="org.glassfish.hk2.external.aopalliance-repackaged"/>
       <plugin id="org.glassfish.hk2.external.jakarta.inject"/>

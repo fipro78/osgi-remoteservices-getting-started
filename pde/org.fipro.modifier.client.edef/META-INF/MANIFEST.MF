@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: EDEF Discovery Configuration
+Bundle-SymbolicName: org.fipro.modifier.client.edef
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.fipro.modifier.client.edef
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Remote-Service: edef/camelcase.xml

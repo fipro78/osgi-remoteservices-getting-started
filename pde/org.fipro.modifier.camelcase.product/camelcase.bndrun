@@ -1,4 +1,4 @@
-index: target/index.xml;name="org.fipro.modifier.uppercase.product"
+index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 
 -standalone: ${index}
 
@@ -9,15 +9,15 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 -resolve.effective: active;skip:="osgi.service"
 
 -runrequires: \
-	osgi.identity;filter:='(osgi.identity=org.fipro.modifier.uppercase)'
+	osgi.identity;filter:='(osgi.identity=org.fipro.modifier.camelcase)'
 
 -runbundles: \
-	com.fasterxml.jackson.core.jackson-annotations,\
-	com.fasterxml.jackson.core.jackson-core,\
-	com.fasterxml.jackson.core.jackson-databind,\
-	com.fasterxml.jackson.jaxrs.jackson-jaxrs-base,\
-	com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider,\
-	com.fasterxml.jackson.module.jackson-module-jaxb-annotations,\
+	org.apache.felix.scr,\
+	org.eclipse.equinox.common,\
+	org.eclipse.equinox.event,\
+	org.slf4j.api,\
+	org.fipro.modifier.api,\
+	org.fipro.modifier.camelcase,\
 	com.sun.activation.javax.activation,\
 	jakarta.annotation-api,\
 	jakarta.servlet-api,\
@@ -25,32 +25,34 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	jakarta.xml.bind-api,\
 	javassist,\
 	javax.validation.api,\
+	com.fasterxml.jackson.core.jackson-annotations,\
+	com.fasterxml.jackson.core.jackson-core,\
+	com.fasterxml.jackson.core.jackson-databind,\
+	com.fasterxml.jackson.jaxrs.jackson-jaxrs-base,\
+	com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider,\
+	com.fasterxml.jackson.module.jackson-module-jaxb-annotations,\
 	org.apache.felix.gogo.command,\
 	org.apache.felix.gogo.runtime,\
 	org.apache.felix.gogo.shell,\
-	org.apache.felix.scr,\
+	org.eclipse.equinox.http.servlet,\
 	org.eclipse.core.jobs,\
 	org.eclipse.ecf,\
 	org.eclipse.ecf.console,\
-	org.eclipse.ecf.discovery,\
 	org.eclipse.ecf.identity,\
 	org.eclipse.ecf.osgi.services.distribution,\
 	org.eclipse.ecf.osgi.services.remoteserviceadmin,\
 	org.eclipse.ecf.osgi.services.remoteserviceadmin.console,\
-	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy,\
 	org.eclipse.ecf.provider.jaxrs,\
 	org.eclipse.ecf.provider.jaxrs.server,\
 	org.eclipse.ecf.provider.jersey.server,\
-	org.eclipse.ecf.provider.jmdns,\
 	org.eclipse.ecf.remoteservice,\
 	org.eclipse.ecf.remoteservice.asyncproxy,\
-	org.eclipse.ecf.sharedobject,\
-	org.eclipse.equinox.common,\
 	org.eclipse.equinox.concurrent,\
-	org.eclipse.equinox.console,\
-	org.eclipse.equinox.event,\
+	org.eclipse.ecf.sharedobject,\
 	org.eclipse.equinox.http.jetty,\
-	org.eclipse.equinox.http.servlet,\
+	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy,\
+	org.eclipse.ecf.discovery,\
+	org.eclipse.equinox.console,\
 	org.eclipse.jetty.http,\
 	org.eclipse.jetty.io,\
 	org.eclipse.jetty.security,\
@@ -61,8 +63,6 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	org.eclipse.osgi.services,\
 	org.eclipse.osgi.services.remoteserviceadmin,\
 	org.eclipse.osgi.util,\
-	org.fipro.modifier.api,\
-	org.fipro.modifier.uppercase,\
 	org.glassfish.hk2.api,\
 	org.glassfish.hk2.external.aopalliance-repackaged,\
 	org.glassfish.hk2.external.jakarta.inject,\
@@ -77,9 +77,8 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	org.glassfish.jersey.ext.jersey-entity-filtering,\
 	org.glassfish.jersey.inject.jersey-hk2,\
 	org.glassfish.jersey.media.jersey-media-jaxb,\
-	org.glassfish.jersey.media.jersey-media-json-jackson,\
-	org.slf4j.api
+	org.glassfish.jersey.media.jersey-media-json-jackson
 	
 -runproperties:	\
-	osgi.console=
--runvm: -Dorg.osgi.service.http.port=8181
+	osgi.console=,\
+	org.osgi.service.http.port=8282

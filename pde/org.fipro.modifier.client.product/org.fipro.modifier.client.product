@@ -72,6 +72,7 @@
       <plugin id="org.eclipse.osgi.util"/>
       <plugin id="org.fipro.modifier.api"/>
       <plugin id="org.fipro.modifier.client"/>
+      <plugin id="org.fipro.modifier.client.edef"/>
       <plugin id="org.glassfish.hk2.api"/>
       <plugin id="org.glassfish.hk2.external.aopalliance-repackaged"/>
       <plugin id="org.glassfish.hk2.external.jakarta.inject"/>
@@ -91,7 +92,6 @@
    </plugins>
 
    <configurations>
-      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.ecf.osgi.services.distribution" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.ecf.provider.remoteservice" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="0" />

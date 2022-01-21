@@ -12,10 +12,12 @@ index: target/index.xml;name="org.fipro.modifier.inverter.product"
 	osgi.identity;filter:='(osgi.identity=org.fipro.modifier.inverter)'
 
 -runbundles: \
-	org.fipro.modifier.api,\
-	org.fipro.modifier.inverter,\
-	org.eclipse.osgi.services,\
-	org.eclipse.osgi.util,\
+	com.sun.activation.javax.activation,\
+	jakarta.ws.rs-api,\
+	jakarta.xml.bind-api,\
+	org.apache.felix.gogo.command,\
+	org.apache.felix.gogo.runtime,\
+	org.apache.felix.gogo.shell,\
 	org.apache.felix.scr,\
 	org.eclipse.core.jobs,\
 	org.eclipse.ecf,\
@@ -32,5 +34,14 @@ index: target/index.xml;name="org.fipro.modifier.inverter.product"
 	org.eclipse.ecf.sharedobject,\
 	org.eclipse.equinox.common,\
 	org.eclipse.equinox.concurrent,\
+	org.eclipse.equinox.console,\
 	org.eclipse.equinox.event,\
-	org.eclipse.osgi.services.remoteserviceadmin
+	org.eclipse.osgi.services,\
+	org.eclipse.osgi.services.remoteserviceadmin,\
+	org.eclipse.osgi.util,\
+	org.fipro.modifier.api,\
+	org.fipro.modifier.inverter
+
+-runproperties:	\
+	osgi.console=
+	

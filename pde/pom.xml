@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+    http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.fipro.remoteservice</groupId>
+    <artifactId>org.fipro.remoteservice.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <tycho.version>2.5.0</tycho.version>
+        <bnd.version>6.1.0</bnd.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+    </properties>
+	
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-maven-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>tycho-packaging-plugin</artifactId>
+                <version>${tycho.version}</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+				</configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.eclipse.tycho</groupId>
+                <artifactId>target-platform-configuration</artifactId>
+                <version>${tycho.version}</version>
+                <configuration>
+                    <environments>
+                        <environment>
+                            <os>win32</os>
+                            <ws>win32</ws>
+                            <arch>x86_64</arch>
+                        </environment>
+                    </environments>
+
+					<target>
+						<artifact>
+							<groupId>org.fipro.remoteservice</groupId>
+							<artifactId>org.fipro.remoteservice.target</artifactId>
+							<version>${project.version}</version>
+						</artifact>
+					</target>
+
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+	
+	<modules>
+		<module>org.fipro.remoteservice.target</module>
+		<module>org.fipro.remoteservice.debug</module>
+		<module>org.fipro.modifier.api</module>
+		
+		<!-- inverter service - generic/jmdns -->
+		<module>org.fipro.modifier.inverter</module>
+		<module>org.fipro.modifier.inverter.product</module>
+		
+		<!-- uppercase service - jaxrs/jmdns -->
+		<module>org.fipro.modifier.uppercase</module>
+		<module>org.fipro.modifier.uppercase.product</module>
+		
+		<!-- camelcase service - jaxrs/edef -->
+		<module>org.fipro.modifier.camelcase</module>
+		<module>org.fipro.modifier.camelcase.product</module>
+		
+		<!-- client - generic/jaxrs/jmdns/edef -->
+		<module>org.fipro.modifier.client</module>
+		<module>org.fipro.modifier.client.edef</module>
+		<module>org.fipro.modifier.client.product</module>
+	</modules>
+</project> 
