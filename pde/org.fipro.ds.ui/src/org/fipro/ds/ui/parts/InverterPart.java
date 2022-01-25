@@ -75,11 +75,20 @@ public class InverterPart {
 		Button importButton = new Button(parent, SWT.PUSH);
 		importButton.setText("Import EDEF");
 		GridDataFactory.defaultsFor(importButton).applyTo(importButton);
-		 
 		importButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				importer.importService();
+			}
+		});
+		
+		Button closeImportButton = new Button(parent, SWT.PUSH);
+		closeImportButton.setText("Close EDEF");
+		GridDataFactory.defaultsFor(closeImportButton).applyTo(closeImportButton);
+		closeImportButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				importer.closeImport();
 			}
 		});
 	}

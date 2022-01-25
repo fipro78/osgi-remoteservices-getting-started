@@ -6,6 +6,7 @@ import java.util.Map;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 import org.osgi.service.remoteserviceadmin.EndpointDescription;
+import org.osgi.service.remoteserviceadmin.ImportRegistration;
 import org.osgi.service.remoteserviceadmin.RemoteServiceAdmin;
 
 @Component(service = EdefImport.class)
@@ -13,6 +14,8 @@ public class EdefImport {
 
 	@Reference
 	RemoteServiceAdmin admin;
+	
+	ImportRegistration importRegistration;
 	
 	public void importService() {
 		Map<String, Object> properties = new HashMap<String, Object>();
@@ -24,9 +27,9 @@ public class EdefImport {
 		properties.put("ecf.rsvc.id", 1l);
 		properties.put("endpoint.framework.uuid", "0");
 		properties.put("endpoint.id", "0");
-		properties.put("endpoint.package.version.org.fipro.modifier", "1.0.0");
+		properties.put("endpoint.package.version.org.fipro.modifier.api", "1.0.0");
 		properties.put("endpoint.service.id", 38l);
-		properties.put("objectClass", new String[] { "org.fipro.modifier.StringModifier" });
+		properties.put("objectClass", new String[] { "org.fipro.modifier.api.StringModifier" });
 		properties.put("remote.configs.supported", new String[] { "ecf.jaxrs.jersey.server" });
 		properties.put("remote.intents.supported", new String[] { "passByValue", "exactlyOnce", "ordered", "osgi.async", "osgi.private", "osgi.confidential", "jaxrs" });
 		properties.put("service.imported", "true");
@@ -34,6 +37,12 @@ public class EdefImport {
 		properties.put("service.imported.configs", new String[] { "ecf.jaxrs.jersey.server" });
 		
 		EndpointDescription desc = new EndpointDescription(properties);
-		admin.importService(desc);
+		this.importRegistration = admin.importService(desc);
+	}
+	
+	public void closeImport() {
+		if (this.importRegistration != null) {
+			this.importRegistration.close();
+		}
 	}
 }
