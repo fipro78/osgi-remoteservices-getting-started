@@ -8,6 +8,8 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: javax.ws.rs;version="2.1.5",
  javax.ws.rs.core;version="2.1.5",
  org.fipro.modifier.api;version="[1.0.0,2.0.0)",
+ org.osgi.framework;version="1.10.0",
  org.osgi.service.component.annotations;version="[1.3.0,2.0.0)";resolution:=optional
-Service-Component: OSGI-INF/org.fipro.modifier.camelcase.CamelCaseModifier.xml
+Service-Component: OSGI-INF/org.fipro.modifier.camelcase.ActivateEquinoxHttp.xml,
+ OSGI-INF/org.fipro.modifier.camelcase.CamelCaseModifier.xml
 Bundle-ActivationPolicy: lazy

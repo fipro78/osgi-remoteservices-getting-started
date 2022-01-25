@@ -15,6 +15,8 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	org.apache.felix.scr,\
 	org.eclipse.equinox.common,\
 	org.eclipse.equinox.event,\
+	org.eclipse.equinox.http.servlet,\
+	org.eclipse.equinox.http.jetty,\
 	org.slf4j.api,\
 	org.fipro.modifier.api,\
 	org.fipro.modifier.camelcase,\
@@ -34,7 +36,6 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	org.apache.felix.gogo.command,\
 	org.apache.felix.gogo.runtime,\
 	org.apache.felix.gogo.shell,\
-	org.eclipse.equinox.http.servlet,\
 	org.eclipse.core.jobs,\
 	org.eclipse.ecf,\
 	org.eclipse.ecf.console,\
@@ -49,7 +50,6 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	org.eclipse.ecf.remoteservice.asyncproxy,\
 	org.eclipse.equinox.concurrent,\
 	org.eclipse.ecf.sharedobject,\
-	org.eclipse.equinox.http.jetty,\
 	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy,\
 	org.eclipse.ecf.discovery,\
 	org.eclipse.equinox.console,\
@@ -81,4 +81,5 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	
 -runproperties:	\
 	osgi.console=,\
-	org.osgi.service.http.port=8282
+	org.osgi.service.http.port=8282,\
+	ecf.jaxrs.server.pathPrefix=/services

@@ -81,5 +81,6 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	org.slf4j.api
 	
 -runproperties:	\
-	osgi.console=
--runvm: -Dorg.osgi.service.http.port=8181
+	osgi.console=,\
+	org.osgi.service.http.port=8181,\
+	ecf.jaxrs.server.pathPrefix=/services

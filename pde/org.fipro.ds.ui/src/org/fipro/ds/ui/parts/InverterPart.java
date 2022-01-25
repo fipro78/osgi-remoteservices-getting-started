@@ -18,6 +18,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
+import org.fipro.ds.ui.edef.EdefImport;
 import org.fipro.modifier.api.StringModifier;
  
 public class InverterPart {
@@ -27,6 +28,10 @@ public class InverterPart {
 	private Button button;
 	private Text input;
 	private Text output;
+	
+	@Service
+	@Inject
+	EdefImport importer;
 	
 	@PostConstruct
 	public void postConstruct(Composite parent) {
@@ -64,6 +69,17 @@ public class InverterPart {
 						|| e.keyCode == SWT.KEYPAD_CR) {
 					processModification();
 				}
+			}
+		});
+		 
+		Button importButton = new Button(parent, SWT.PUSH);
+		importButton.setText("Import EDEF");
+		GridDataFactory.defaultsFor(importButton).applyTo(importButton);
+		 
+		importButton.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				importer.importService();
 			}
 		});
 	}
