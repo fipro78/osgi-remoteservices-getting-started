@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//resources/OSGI-INF/configurator/configuration.json=UTF-8
+encoding//src/org/fipro/modifier/client/app/package-info.java=UTF-8
+encoding/bnd.bnd=UTF-8
+encoding/org.fipro.modifier.client.app.bndrun=UTF-8
