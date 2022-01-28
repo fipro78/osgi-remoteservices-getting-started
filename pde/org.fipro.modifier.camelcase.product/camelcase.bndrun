@@ -17,9 +17,6 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	org.eclipse.equinox.event,\
 	org.eclipse.equinox.http.servlet,\
 	org.eclipse.equinox.http.jetty,\
-	org.slf4j.api,\
-	org.fipro.modifier.api,\
-	org.fipro.modifier.camelcase,\
 	com.sun.activation.javax.activation,\
 	jakarta.annotation-api,\
 	jakarta.servlet-api,\
@@ -77,7 +74,10 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	org.glassfish.jersey.ext.jersey-entity-filtering,\
 	org.glassfish.jersey.inject.jersey-hk2,\
 	org.glassfish.jersey.media.jersey-media-jaxb,\
-	org.glassfish.jersey.media.jersey-media-json-jackson
+	org.glassfish.jersey.media.jersey-media-json-jackson,\
+	org.slf4j.api,\
+	org.fipro.modifier.api,\
+	org.fipro.modifier.camelcase
 	
 -runproperties:	\
 	osgi.console=,\

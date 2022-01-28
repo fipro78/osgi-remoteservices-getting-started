@@ -18,7 +18,7 @@ public class EdefImport {
 	ImportRegistration importRegistration;
 	
 	public void importService() {
-		Map<String, Object> properties = new HashMap<String, Object>();
+		Map<String, Object> properties = new HashMap<>();
 		
 		properties.put("ecf.endpoint.id", "http://localhost:8282/services/camelcase");
 		properties.put("ecf.endpoint.id.ns", "ecf.namespace.jaxrs");

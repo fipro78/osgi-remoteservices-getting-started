@@ -22,14 +22,14 @@ public class ActivateEquinoxHttp {
 	void activate(BundleContext context) {
 		Arrays.stream(context.getBundles())
 			.filter(b ->  
-				b.getSymbolicName().contains("equinox.http") 
+				b.getSymbolicName().contains("equinox.http.jetty") 
 				&& b.getState() == Bundle.STARTING)
 			.forEach(b -> {
-				System.out.println("Activate " + b.getSymbolicName());
 				try {
 					b.start();
 				} catch (BundleException e) {
 					System.err.println("Failed to activate bundle " + b.getSymbolicName());
+					e.printStackTrace();
 				}
 			});
 	}

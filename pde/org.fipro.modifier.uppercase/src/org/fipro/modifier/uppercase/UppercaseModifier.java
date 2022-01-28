@@ -18,7 +18,6 @@ import javax.ws.rs.core.MediaType;
     immediate = true,
     property = { 
         "service.exported.interfaces=*",
-        "service.exported.configs=ecf.jaxrs.jersey.server", 
         "service.exported.intents=jaxrs",
         "ecf.jaxrs.server.pathPrefix=/upper"})
 public class UppercaseModifier implements StringModifier {

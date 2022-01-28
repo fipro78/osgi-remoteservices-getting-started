@@ -4,7 +4,6 @@
 	<locations>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://download.eclipse.org/releases/2021-12"/>
-			<unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.14.26.v20211008-2151"/>
 			<unit id="org.eclipse.equinox.compendium.sdk.feature.group" version="3.22.200.v20211021-1418"/>
 			<unit id="org.eclipse.equinox.core.sdk.feature.group" version="3.23.200.v20211104-1730"/>
 			<unit id="org.eclipse.equinox.executable.feature.group" version="3.8.1400.v20211117-0650"/>
@@ -16,5 +15,9 @@
 			<unit id="org.eclipse.ecf.provider.jersey.client.feature.feature.group" version="1.14.4.202101171410"/>
 			<unit id="org.eclipse.ecf.provider.jersey.server.feature.feature.group" version="1.14.4.202101171410"/>
 		</location>
+        <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+            <repository location="https://download.eclipse.org/rt/ecf/3.14.31/site.p2"/>
+            <unit id="org.eclipse.ecf.remoteservice.sdk.feature.feature.group" version="3.14.31.v20220116-0708"/>
+        </location>
 	</locations>
 </target>

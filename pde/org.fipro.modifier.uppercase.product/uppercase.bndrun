@@ -61,8 +61,6 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	org.eclipse.osgi.services,\
 	org.eclipse.osgi.services.remoteserviceadmin,\
 	org.eclipse.osgi.util,\
-	org.fipro.modifier.api,\
-	org.fipro.modifier.uppercase,\
 	org.glassfish.hk2.api,\
 	org.glassfish.hk2.external.aopalliance-repackaged,\
 	org.glassfish.hk2.external.jakarta.inject,\
@@ -78,7 +76,9 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	org.glassfish.jersey.inject.jersey-hk2,\
 	org.glassfish.jersey.media.jersey-media-jaxb,\
 	org.glassfish.jersey.media.jersey-media-json-jackson,\
-	org.slf4j.api
+	org.slf4j.api,\
+	org.fipro.modifier.api,\
+	org.fipro.modifier.uppercase
 	
 -runproperties:	\
 	osgi.console=,\

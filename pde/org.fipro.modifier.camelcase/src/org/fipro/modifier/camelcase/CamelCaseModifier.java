@@ -14,7 +14,6 @@ import org.osgi.service.component.annotations.Component;
 		immediate = true,
 		property = {
 				"service.exported.interfaces=*",
-				"service.exported.configs=ecf.jaxrs.jersey.server",
 				"service.exported.intents=jaxrs",
 				"ecf.jaxrs.server.pathPrefix=/camelcase"})
 public class CamelCaseModifier implements StringModifier {
