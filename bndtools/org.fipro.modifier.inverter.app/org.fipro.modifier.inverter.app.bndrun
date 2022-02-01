@@ -11,16 +11,17 @@
 -runrequires: \
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.shell)',\
 	osgi.identity;filter:='(osgi.identity=org.apache.felix.gogo.command)',\
-	osgi.identity;filter:='(osgi.identity=org.fipro.modifier.inverter.app)',\
 	bnd.identity;id='org.fipro.modifier.inverter',\
-	bnd.identity;id='org.eclipse.ecf',\
-	bnd.identity;id='org.eclipse.ecf.remoteservice',\
 	bnd.identity;id='org.eclipse.ecf.osgi.services.distribution',\
 	bnd.identity;id='org.eclipse.ecf.provider.jmdns',\
-	bnd.identity;id='org.eclipse.ecf.provider.remoteservice'
+	bnd.identity;id='org.eclipse.ecf.provider.remoteservice',\
+	bnd.identity;id='com.sun.activation.javax.activation',\
+	bnd.identity;id='jakarta.ws.rs-api',\
+	bnd.identity;id=jaxb-api
 -runbundles: \
-	org.apache.felix.configadmin;version='[1.9.8,1.9.9)',\
-	org.apache.felix.configurator;version='[1.0.6,1.0.7)',\
+	com.sun.activation.javax.activation;version='[1.2.0,1.2.1)',\
+	jakarta.ws.rs-api;version='[2.1.5,2.1.6)',\
+	jaxb-api;version='[2.3.1,2.3.2)',\
 	org.apache.felix.gogo.command;version='[1.0.2,1.0.3)',\
 	org.apache.felix.gogo.runtime;version='[1.0.10,1.0.11)',\
 	org.apache.felix.gogo.shell;version='[1.0.0,1.0.1)',\
@@ -43,6 +44,5 @@
 	org.eclipse.osgi.services.remoteserviceadmin;version='[1.6.300,1.6.301)',\
 	org.fipro.modifier.api;version=snapshot,\
 	org.fipro.modifier.inverter;version=snapshot,\
-	org.fipro.modifier.inverter.app;version=snapshot,\
 	org.osgi.service.event;version='[1.4.0,1.4.1)',\
 	org.osgi.util.function;version='[1.1.0,1.1.1)'

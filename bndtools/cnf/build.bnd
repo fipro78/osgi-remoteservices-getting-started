@@ -64,10 +64,16 @@
         index=${.}/ecfatcentral.maven; \
         name="ECF Remote Services"
         
--plugin.p2: \
+-plugin.11.p2: \
  	aQute.bnd.repository.p2.provider.P2Repository; \
  	url = https://download.eclipse.org/rt/ecf/3.14.31/site.p2; \
  	name = ECF Remote Services p2
+
+-plugin.12.p2: \
+ 	aQute.bnd.repository.p2.provider.P2Repository; \
+ 	url = https://raw.githubusercontent.com/ECF/JaxRSProviders/master/build/; \
+ 	name = ECF JAX-RS Distribution Provider p2
+ 	
  	
 -releaserepo: Release
 -baselinerepo: Release
