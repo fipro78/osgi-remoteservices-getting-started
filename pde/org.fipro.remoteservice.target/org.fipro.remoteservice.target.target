@@ -12,8 +12,8 @@
 		</location>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://raw.githubusercontent.com/ECF/JaxRSProviders/master/build/"/>
-			<unit id="org.eclipse.ecf.provider.jersey.client.feature.feature.group" version="1.14.4.202101171410"/>
-			<unit id="org.eclipse.ecf.provider.jersey.server.feature.feature.group" version="1.14.4.202101171410"/>
+			<unit id="org.eclipse.ecf.provider.jersey.client.feature.feature.group" version="1.14.5.202202072129"/>
+			<unit id="org.eclipse.ecf.provider.jersey.server.feature.feature.group" version="1.14.5.202202072129"/>
 		</location>
         <location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <repository location="https://download.eclipse.org/rt/ecf/3.14.31/site.p2"/>
