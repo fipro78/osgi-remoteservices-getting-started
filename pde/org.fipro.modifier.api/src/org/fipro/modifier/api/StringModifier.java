@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 @Path("/modify")
 public interface StringModifier {
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     @Path("/{value}")
     String modify(@PathParam("value") String input);
 }

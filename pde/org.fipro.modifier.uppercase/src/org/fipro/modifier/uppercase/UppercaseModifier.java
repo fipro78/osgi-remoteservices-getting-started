@@ -23,13 +23,15 @@ import javax.ws.rs.core.MediaType;
 public class UppercaseModifier implements StringModifier {
 
     @GET
-    // The JAX-RS annotation to specify that JSON is produced
-    @Produces(MediaType.APPLICATION_JSON)
+    // The JAX-RS annotation to specify the result type
+    @Produces(MediaType.TEXT_PLAIN)
     // The JAX-RS annotation to specify that the last part
     // of the URL is used as method parameter
     @Path("/{value}")
     @Override
     public String modify(@PathParam("value") String input) {
-        return input.toUpperCase(Locale.getDefault());
+        return (input != null)
+        	? input.toUpperCase(Locale.getDefault())
+        	: "No input given";
     }
 }

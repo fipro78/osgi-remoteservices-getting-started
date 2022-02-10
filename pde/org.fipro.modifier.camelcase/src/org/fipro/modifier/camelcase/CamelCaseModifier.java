@@ -19,19 +19,24 @@ import org.osgi.service.component.annotations.Component;
 public class CamelCaseModifier implements StringModifier {
 
 	@GET
-	@Produces(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
 	@Path("/{value}")
 	@Override
 	public String modify(@PathParam("value") String input) {
 		StringBuilder builder = new StringBuilder();
-		for (int i = 0; i < input.length(); i++) {
-			char currentChar = input.charAt(i);
-			if (i % 2 == 0) {
-				builder.append(Character.toUpperCase(currentChar));
-			} else {
-				builder.append(Character.toLowerCase(currentChar));
-			}
-		} 
+		if (input != null) {
+			for (int i = 0; i < input.length(); i++) {
+				char currentChar = input.charAt(i);
+				if (i % 2 == 0) {
+					builder.append(Character.toUpperCase(currentChar));
+				} else {
+					builder.append(Character.toLowerCase(currentChar));
+				}
+			} 
+		}
+		else {
+			builder.append("No input given");
+		}
 		return builder.toString();
 	}
 }
