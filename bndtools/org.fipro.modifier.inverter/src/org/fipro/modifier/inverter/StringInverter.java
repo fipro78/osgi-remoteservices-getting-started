@@ -11,6 +11,8 @@ public class StringInverter implements StringModifier {
 
     @Override
     public String modify(String input) {
-        return new StringBuilder(input).reverse().toString();
+        return (input != null)
+        		? new StringBuilder(input).reverse().toString()
+        		: "No input given";
     }
 }
