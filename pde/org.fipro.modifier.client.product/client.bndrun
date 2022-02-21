@@ -31,10 +31,12 @@ index: target/index.xml;name="org.fipro.modifier.inverter.product"
 	org.apache.felix.scr,\
 	org.eclipse.core.jobs,\
 	org.eclipse.ecf,\
+	org.eclipse.ecf.console,\
 	org.eclipse.ecf.discovery,\
 	org.eclipse.ecf.identity,\
 	org.eclipse.ecf.osgi.services.distribution,\
 	org.eclipse.ecf.osgi.services.remoteserviceadmin,\
+	org.eclipse.ecf.osgi.services.remoteserviceadmin.console,\
 	org.eclipse.ecf.osgi.services.remoteserviceadmin.proxy,\
 	org.eclipse.ecf.provider,\
 	org.eclipse.ecf.provider.jaxrs,\

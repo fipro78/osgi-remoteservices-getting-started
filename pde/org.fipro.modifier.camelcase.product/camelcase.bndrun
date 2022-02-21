@@ -80,6 +80,7 @@ index: target/index.xml;name="org.fipro.modifier.camelcase.product"
 	org.fipro.modifier.camelcase
 	
 -runproperties:	\
+	launch.activation.eager=true,\
 	osgi.console=,\
 	org.osgi.service.http.port=8282,\
 	ecf.jaxrs.server.pathPrefix=/services

@@ -81,6 +81,7 @@ index: target/index.xml;name="org.fipro.modifier.uppercase.product"
 	org.fipro.modifier.uppercase
 	
 -runproperties:	\
+	launch.activation.eager=true,\
 	osgi.console=,\
 	org.osgi.service.http.port=8181,\
 	ecf.jaxrs.server.pathPrefix=/services
