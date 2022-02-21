@@ -1,3 +1,17 @@
 # List repository contents using GAV coordinates
 
 org.apache.felix:org.apache.felix.http.jetty:4.1.14
+
+org.eclipse.platform:org.eclipse.equinox.http.jetty:jar:3.8.100
+org.eclipse.platform:org.eclipse.equinox.http.servlet:jar:1.7.200
+org.eclipse.platform:org.eclipse.osgi.services:jar:3.10.200
+
+org.eclipse.jetty:jetty-http:jar:10.0.8
+org.eclipse.jetty:jetty-io:jar:10.0.8
+org.eclipse.jetty:jetty-security:jar:10.0.8
+org.eclipse.jetty:jetty-server:jar:10.0.8
+org.eclipse.jetty:jetty-servlet:jar:10.0.8
+org.eclipse.jetty:jetty-util:jar:10.0.8
+org.eclipse.jetty:jetty-util-ajax:jar:10.0.8
+
+jakarta.servlet:jakarta.servlet-api:jar:4.0.4
