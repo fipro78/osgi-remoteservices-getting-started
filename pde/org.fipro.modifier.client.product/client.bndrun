@@ -25,14 +25,10 @@ index: target/index.xml;name="org.fipro.modifier.inverter.product"
 	jakarta.xml.bind-api,\
 	javassist,\
 	javax.validation.api,\
-	org.apache.commons.codec,\
-	org.apache.commons.logging,\
 	org.apache.felix.gogo.command,\
 	org.apache.felix.gogo.runtime,\
 	org.apache.felix.gogo.shell,\
 	org.apache.felix.scr,\
-	org.apache.httpcomponents.httpclient,\
-	org.apache.httpcomponents.httpcore,\
 	org.eclipse.core.jobs,\
 	org.eclipse.ecf,\
 	org.eclipse.ecf.discovery,\
