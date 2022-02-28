@@ -6,6 +6,15 @@
     <version>1.0-SNAPSHOT</version>
   </parent>
   <artifactId>client-edef</artifactId>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.osgi.enroute</groupId>
+      <artifactId>osgi-api</artifactId>
+      <type>pom</type>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
