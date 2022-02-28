@@ -1,5 +1,5 @@
 # Getting Started with OSGi Remote Services - Bndtools Edition
-This repository contains the sources for the [Getting Started with OSGi Remote Services - Bndtools Edition](http://blog.vogella.com/?p=8090) blog post.
+This repository contains the sources for the [Getting Started with OSGi Remote Services - Bndtools Edition](http://blog.vogella.com/2022/02/28/getting-started-with-osgi-remote-services-bndtools-edition/) blog post.
 
 The blog post and the sources in this repository cover the following topics:
 - OSGi Remote Services basics with ECF (Eclipse Communication Framework)
